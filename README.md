@@ -11,7 +11,7 @@ Inluded dotfiles for my environments
 ## Installation
 There are two methods to install
 
-## Automatic
+### Automatic
 Install using the install.sh script
 
 First:
