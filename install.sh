@@ -1,7 +1,8 @@
 #!/bin/bash
 
-sudo apt install vim -y
-sudo apt install git -y
+sudo apt-get install vim -y
+sudo apt-get install git -y
+sudo apt-get install tmux -y
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 mv ~/dotfiles/.vimrc ~
 mv ~/dotfiles/.bash_aliases ~
