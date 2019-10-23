@@ -42,4 +42,4 @@ It will isntall all plugins from the .vimrc dotfile
 ## Issues
 Font showing as blocks? You may need to download fonts patched with Powerline symbols or the standalone [PowerlineSymbols.otf](https://powerline.readthedocs.io/en/master/installation/linux.html#fonts-installation).
 Make sure you set the font for your terminal to be either the powerline font or one that is powerline enabled.
-List of fonts that are powerline enabled can be found [here](https://github.com/powerline/fonts), you can also use [this](sudo apt-get install fonts-powerline)
+List of fonts that are powerline enabled can be found [here](https://github.com/powerline/fonts), you can also use `sudo apt-get install fonts-powerline`
