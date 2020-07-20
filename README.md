@@ -39,6 +39,33 @@ Open vim then run:
 ```
 It will isntall all plugins from the .vimrc dotfile
 
+# Notes if using WSL
+
+Make sure you are using windows terminal (the new terminal) for best results. For the full Nord theme in your settings.json use the scheme below to ensure best colours.
+```json
+{
+   	  "name" : "nord",
+  	  "background" : "#2e3440",
+   	  "foreground" : "#d8dee9",
+  	  "black": "#3b4252",
+  	  "blue": "#5e81ac",
+  	  "brightBlack": "#4c566a",
+  	  "brightBlue": "#81a1c1",
+  	  "brightCyan": "#8fbcbb", 
+   	  "brightGreen": "#a3be8c",
+  	  "brightPurple": "#b48ead",
+	  "brightRed": "#bf616a",
+   	  "brightWhite": "#eceff4",
+   	  "brightYellow": "#ebcb8b",
+  	  "cyan": "#88c0d0",
+          "green": "#a3be8c",
+  	  "purple": "#b48ead",
+    	  "red": "#bf616a",
+   	  "white": "#e5e9f0",
+   	  "yellow": "#ebcb8b"
+	}
+```
+
 ## Issues
 Font showing as blocks? You may need to download fonts patched with Powerline symbols or the standalone [PowerlineSymbols.otf](https://powerline.readthedocs.io/en/master/installation/linux.html#fonts-installation).
 Make sure you set the font for your terminal to be either the powerline font or one that is powerline enabled.
