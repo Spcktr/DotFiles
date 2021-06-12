@@ -9,5 +9,5 @@ mv .vimrc ~
 mv .tmux.conf ~
 mv .tmux.conf.local ~
 sudo mv ~/dotfiles/gruvbox.vim /usr/share/vim/vim80/colors/
-vim -c ':PluginInstall' -c ":q" -c ':q'
+vim -c ':PluginInstall' -c ":qa"
 echo "Moves and installs complete, delete folder."
