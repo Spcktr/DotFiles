@@ -28,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LCTL,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,  KC_ESC,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LALT,   TT(1),  KC_SPC,     MT(MOD_LGUI,KC_SPC),   KC_ENT, MO(2)
+                                          KC_LALT,   TT(1),  KC_SPC,     KC_SPC,   KC_ENT, MO(2)
                                       //`--------------------------'  `--------------------------'
 
   ),
@@ -37,7 +37,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
        KC_TAB,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0, KC_PGUP,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LSFT,    KC_G,    KC_Q,    KC_W,    KC_E,    KC_R,                      KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT, KC_VOLU, KC_PGDN,
+      KC_LSFT,    KC_G,    KC_C,    KC_W,    KC_E,    KC_R,                      KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT, KC_VOLU, KC_PGDN,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LCTL,    KC_F,    KC_A,    KC_S,    KC_D,    KC_V,                      KC_MPRV, KC_MPLY, KC_MNXT, KC_MSTP, KC_VOLD, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
@@ -90,16 +90,16 @@ void oled_render_layer_state(void) {
             oled_write_ln_P(PSTR("Default"), false);
             break;
         case L_LOWER:
-            oled_write_ln_P(PSTR("Lower"), false);
+            oled_write_ln_P(PSTR("Game"), false);
             break;
         case L_RAISE:
-            oled_write_ln_P(PSTR("Raise"), false);
+            oled_write_ln_P(PSTR("Symbols"), false);
             break;
         case L_ADJUST:
         case L_ADJUST|L_LOWER:
         case L_ADJUST|L_RAISE:
         case L_ADJUST|L_LOWER|L_RAISE:
-            oled_write_ln_P(PSTR("Adjust"), false);
+            oled_write_ln_P(PSTR("Functions"), false);
             break;
     }
 }
@@ -209,12 +209,12 @@ const uint16_t PROGMEM underscore[] = {KC_N, KC_M, COMBO_END};
 const uint16_t PROGMEM minusdash[] = {KC_H, KC_J, COMBO_END};
 const uint16_t PROGMEM equalskey[] = {KC_Y, KC_U, COMBO_END};
 const uint16_t PROGMEM pluskey[] = {KC_H, KC_J, KC_K, COMBO_END};
-const uint16_t PROGMEM leftsquarebracket[] = {KC_U, MT(MOD_LGUI,KC_SPC), COMBO_END};
-const uint16_t PROGMEM rightsquarebracket[] = {KC_I, MT(MOD_LGUI,KC_SPC), COMBO_END};
-const uint16_t PROGMEM leftbracket[] = {MT(MOD_LGUI,KC_SPC), KC_J, COMBO_END};
-const uint16_t PROGMEM rightbracket[] = {MT(MOD_LGUI,KC_SPC), KC_K, COMBO_END};
-const uint16_t PROGMEM leftcurly[] = {MT(MOD_LGUI,KC_SPC), KC_M, COMBO_END};
-const uint16_t PROGMEM rightcurly[] = {MT(MOD_LGUI,KC_SPC), KC_COMM, COMBO_END};
+const uint16_t PROGMEM leftsquarebracket[] = {KC_U, KC_SPC, COMBO_END};
+const uint16_t PROGMEM rightsquarebracket[] = {KC_I, KC_SPC, COMBO_END};
+const uint16_t PROGMEM leftbracket[] = {KC_SPC, KC_J, COMBO_END};
+const uint16_t PROGMEM rightbracket[] = {KC_SPC, KC_K, COMBO_END};
+const uint16_t PROGMEM leftcurly[] = {KC_SPC, KC_M, COMBO_END};
+const uint16_t PROGMEM rightcurly[] = {KC_SPC, KC_COMM, COMBO_END};
 const uint16_t PROGMEM atkey[] = {KC_U, KC_K, KC_L, COMBO_END};
 const uint16_t PROGMEM starkey[] = {KC_N, KC_M, KC_COMM, COMBO_END};
 const uint16_t PROGMEM ampur[] = {KC_H, KC_K, COMBO_END};
@@ -228,7 +228,7 @@ const uint16_t PROGMEM caretkey[] = {KC_I, KC_J, KC_L, COMBO_END};
 const uint16_t PROGMEM pipekey[] = {KC_U, KC_J, COMBO_END};
 const uint16_t PROGMEM percentagekey[] = {KC_U, KC_DOT, COMBO_END};
 const uint16_t PROGMEM backtick[] = {KC_Y, KC_J, COMBO_END};
-const uint16_t PROGMEM leftanglebracket[] = {KC_U, KC_K, MT(MOD_LGUI,KC_SPC), COMBO_END};
+const uint16_t PROGMEM leftanglebracket[] = {KC_U, KC_K, KC_SPC, COMBO_END};
 const uint16_t PROGMEM righttrianglebracket[] = {KC_I, KC_J, MO(2), COMBO_END};
 const uint16_t PROGMEM tildekey[] = {KC_P, KC_J, COMBO_END};
 const uint16_t PROGMEM homekey[] = {KC_U, KC_I, KC_O, COMBO_END};
