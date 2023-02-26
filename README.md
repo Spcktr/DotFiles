@@ -46,7 +46,7 @@ I've added a [QMK](https://docs.qmk.fm/#/) keymap for my [corne v2](https://gith
 
 ### Layout Image
 
-[[https://github.com/Spcktr/DotFiles/blob/master/keyboard_layout.png|alt=keyboard layout]]
+[[https://github.com/Spcktr/DotFiles/blob/master/keyboard_layout.png|alt=keyboardlayout]]
 
 
 # Notes if using WSL
