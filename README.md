@@ -43,6 +43,12 @@ It will isntall all plugins from the .vimrc dotfile
 
 I've added a [QMK](https://docs.qmk.fm/#/) keymap for my [corne v2](https://github.com/foostan/crkbd). This is a chorded keymap that covers most modifiers that I use. I will get around to uploading a keymap image at some point in the future but the keymap.c is pretty obvious.
 
+
+### Layout Image
+
+[[https://github.com/Spcktr/DotFiles/blob/master/keyboard_layout.png|alt=keyboard layout]]
+
+
 # Notes if using WSL
 
 Make sure you are using windows terminal (the new terminal) for best results. For the full Nord theme in your settings.json use the scheme below to ensure best colours.
