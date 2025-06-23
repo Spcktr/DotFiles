@@ -1,111 +1,48 @@
-set nocompatible              " required
-filetype off                  " required
+let g:astro_javascript = 'enable'
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" ------------------------------------------------------------
+" vim-protodef configuration
+" ------------------------------------------------------------
 
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+nmap <buffer> <silent> <leader> ,PP
+nmap <buffer> <silent> <leader> ,PN
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" add all your plugins here (note older versions of Vundle
-" used Bundle instead of Plugin)
-  
-Plugin 'tmhedberg/SimpylFold'
-
-" highlight syntax errors & highlighting
-Plugin 'vim-syntastic/syntastic'
-Plugin 'pangloss/vim-javascript'
-
-" variables, functions, etc
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
-Plugin 'majutsushi/tagbar'
-
-" nerd tree
-Plugin 'preservim/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-
-" ctrl + p to bring up file list
-Plugin 'kien/ctrlp.vim'
-
-" git commits using :Gcommit
-Plugin 'tpope/vim-fugitive'
-
-" adds git 
-" Plugin 'ariblade/vim-gitgutter'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+" NOTE: This doesn't seem to disable the sorting.
+let g:disable_protodef_sorting = 1
 
 
-" opens and close brackets
-Plugin 'Raimondi/delimitMate'
+" ------------------------------------------------------------
+" Vim configuration
+" ------------------------------------------------------------
 
-" icons
-Plugin 'ryanoasis/vim-devicons'
+set nu                  " Enable line numbers
+syntax on               " Enable synax highlighting
+set incsearch           " Enable incremental search
+set hlsearch            " Enable highlight search
+set splitbelow          " Always split below"
+set mouse=a             " Enable mouse drag on window splits
+set tabstop=4           " How many columns of whitespace a \t is worth
+set shiftwidth=4        " How many columns of whitespace a “level of indentation” is worth
+set expandtab           " Use spaces when tabbing
 
-" beancount syntax highligher
-" Plugin 'nathangrigg/vim-beancount'
-" plugin for nord theme
-Plugin 'arcticicestudio/nord-vim'
+if !has('nvim')
+    set termwinsize=12x0    " Set terminal size
+endif
 
-" Vim Wiki
-" Plugin 'vimwiki/vimwiki'
-
-" vim markdown
-Plugin 'SidOfc/mkdx'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-" encoding
-set encoding=utf-8
-
-" set split
-set splitbelow
-set splitright
-
-" Split navigation
-
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+set background=dark     " Set background
+colorscheme scheakur    " Set color scheme
 
 
-" nerdtree alias mapping
-nnoremap <Space>nt :NERDTree<CR>
+" ------------------------------------------------------------
+" Key mappings
+" ------------------------------------------------------------
 
-" Enable folding
-set foldmethod=indent
-set foldlevel=99
+" General
+nmap        <C-B>     :buffers<CR>
+nmap        <C-J>     :term<CR>
 
-" Enable folding with the spacebar
-nnoremap <space> za
+" NERDTree
+nmap        <F2>      :NERDTreeToggle<CR>
 
-syntax on
-" line number
-set relativenumber
-set showcmd
-set incsearch
-set hlsearch
-set ruler
-set backspace=indent,eol,start
-
-
-set mouse=a
-set number
-au! BufNewFile,BufRead *.svelte set ft=html
-
-filetype plugin on
-set tabstop=4
-
-" mkdx settings
-let g:mkdx#settings     = { 'highlight': { 'enable': 1 },
-                        \ 'enter': { 'shift': 1 },
-                        \ 'links': { 'external': { 'enable': 1 } },
-                        \ 'toc': { 'text': 'Table of Contents', 'update_on_write': 1 },
-                        \ 'fold': { 'enable': 1 } }
+" tagbar
+nmap        <F8>      :TagbarToggle<CR>
